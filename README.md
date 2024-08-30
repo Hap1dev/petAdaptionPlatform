@@ -10,7 +10,7 @@ PetHouse is a web application designed to connect pet lovers with pet shelters. 
 * **Responsive Design:** The app is fully responsive, ensuring a seamless experience across devices (desktop, tablet, mobile).
 
 ## 🛠️ Technologies Used
-* **Frontend:** HTML, CSS, JavaScript
+* **Frontend:** HTML, CSS, JavaScript, EJS
 * **Backend:** Node.js, Express.js
-* **Database:** (Optional: PostgreSQL / MongoDB / MySQL depending on your choice)
+* **Database:** PostgreSQL
 * **File Uploads:** Multer (for uploading pet images)
