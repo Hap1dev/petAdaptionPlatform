@@ -72,6 +72,9 @@
           <div class="card">
             <div class="card-body">
               <h3 class="card-title mb-3"><%= pet.animal %></h3>
+              <% if (pet.image) { %>
+                  <img src="data:image/jpeg;base64,<%= Buffer.from(pet.image).toString('base64') %>" class="card-img" alt="<%= pet.animal %>">
+                <% } %>
               <p><strong>Breed:</strong> <%= pet.breed %></p>
               <p><strong>State:</strong> <%= pet.state %></p>
               <p><strong>City:</strong> <%= pet.city %></p>

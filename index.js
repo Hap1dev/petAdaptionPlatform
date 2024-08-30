@@ -227,6 +227,20 @@ app.get("/stats", async (req, res) => {
 
 });
 
+app.post("/deletepet/:id", async (req, res) => {
+  const petId = req.params.id;
+  const client = await db.connect();
+  try{
+    await client.query("DELETE FROM shelterstaff WHERE id = $1", [petId]);
+    res.redirect("/shelterstaff");
+  }catch(error){
+    console.error("Error making request: ", error);
+    res.status(500).json({error: "Internal Server Error"});
+  }finally{
+    await client.release();
+  }
+});
+
 app.listen(port, () => {
   console.log("Server running on port: " + port);
 });
