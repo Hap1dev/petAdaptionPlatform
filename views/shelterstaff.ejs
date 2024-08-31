@@ -72,8 +72,6 @@
             <p><strong>City:</strong> <%= pet.city %></p>
             <p><strong>Street:</strong> <%= pet.street %></p>
             <p><strong>Pincode:</strong> <%= pet.pincode %></p>
-
-            <!-- Delete Button Form -->
             <form action="/deletepet/<%= pet.id %>" method="POST" class="mt-3">
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="btn btn-danger">Delete</button>
